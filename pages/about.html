@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Sweet Symphony — Our story, mission, and the expert culinary team behind Chennai's premier artisanal bakery &amp; sweet shop." />
+  <title>About Us — Sweet Symphony</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍰</text></svg>">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+  <link id="rtl-stylesheet" rel="stylesheet" href="../assets/css/rtl.css" disabled />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .mission-grid { display:grid; grid-template-columns:1fr; gap:3rem; align-items:center; }
+    @media(min-width:1024px){ .mission-grid { grid-template-columns:1fr 1fr; } }
+    .mission-image { position:relative; border-radius:var(--radius-xl); overflow:hidden; border:1px solid var(--border); box-shadow:var(--shadow-md); }
+    .mission-image img { width:100%; height:auto; display:block; object-fit:contain; }
+    .mission-image-badge {
+      position:absolute; bottom:2rem; right:-1rem;
+      background:linear-gradient(135deg,var(--primary),var(--primary-light));
+      color:#fff; padding:1.25rem 1.75rem; border-radius:var(--radius-lg);
+      box-shadow:var(--shadow-lg); text-align:center;
+    }
+    .mission-image-badge .big { font-family:var(--font-display);font-size:2.5rem;font-weight:550;display:block;line-height:1; }
+    .mission-image-badge small { font-size:.8rem;opacity:.9; }
+    .values-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1.5rem; }
+    @media(min-width:768px) and (max-width:1200px){
+      .values-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .value-card {
+      padding:0 0 1.5rem 0; border-radius:var(--radius-lg); text-align:center;
+      border:1px solid var(--border); background:var(--bg-card);
+      transition:var(--transition-bounce);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .value-card:hover { transform:translateY(-8px); box-shadow:var(--shadow-lg); border-color:var(--primary); }
+    .value-card-img-wrapper {
+      width: 100%;
+      height: 160px;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 1rem;
+    }
+    .value-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .value-card:hover .value-card-img {
+      transform: scale(1.08);
+    }
+    .value-card-content {
+      padding: 0 1.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .value-card-content h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      margin-bottom: 0.25rem;
+    }
+    .value-card-content p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    .value-icon { font-size:2rem; display:block; margin-bottom:0.75rem; }
+    @media (min-width: 768px) and (max-width: 1200px) {
+      .about-team-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+      .about-team-grid .team-card:nth-child(4) {
+        grid-column: span 1 !important;
+        justify-self: auto !important;
+        max-width: none !important;
+        width: auto !important;
+        box-shadow: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <nav class="nav-container">
+    <a href="../index.html" class="brand">
+      <div class="brand-logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px; height:20px; color:#fff; display:block;">
+          <path d="M6 15h12M4 20h16M12 4v4M12 11h.01M9 11h.01M15 11h.01" />
+          <rect x="5" y="8" width="14" height="7" rx="1" />
+          <rect x="3" y="15" width="18" height="5" rx="1" />
+        </svg>
+      </div>
+      <span class="brand-name">Sweet <span>Symphony</span></span>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="../index.html" class="nav-link">Home</a></li>
+      <li><a href="home2.html" class="nav-link">Home 2</a></li>
+      <li><a href="about.html" class="nav-link active">About</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-icon-btn" onclick="window.Scala.RTLManager.toggle()" title="Toggle RTL" aria-label="Toggle RTL" style="font-size: 0.78rem; font-weight: 550;">RTL</button>
+      <button class="nav-icon-btn" onclick="window.Scala.ThemeManager.toggle()" title="Toggle Theme" aria-label="Toggle theme"><i class="theme-toggle-icon fas fa-moon"></i></button>
+      <a href="login.html" class="btn btn-primary btn-sm">Login</a>
+    </div>
+    <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<div class="mobile-menu" role="dialog" aria-modal="true">
+  <button class="mobile-close" aria-label="Close menu"><i class="fas fa-times"></i></button>
+  <a href="../index.html" class="nav-link">Home</a>
+  <a href="home2.html" class="nav-link">Home 2</a>
+  <a href="about.html" class="nav-link active">About</a>
+  <a href="services.html" class="nav-link">Services</a>
+  <a href="blog.html" class="nav-link">Blog</a>
+  <a href="contact.html" class="nav-link">Contact</a>
+  <div class="mobile-menu-actions">
+    <div class="mobile-menu-row">
+      <button class="btn btn-ghost" onclick="window.Scala.RTLManager.toggle()" style="font-weight: 550;">RTL</button>
+      <button class="btn btn-ghost" onclick="window.Scala.ThemeManager.toggle()"><i class="theme-toggle-icon fas fa-moon"></i></button>
+    </div>
+    <a href="login.html" class="btn btn-primary">Login</a>
+  </div>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-container">
+    <div class="page-header-content">
+      <h1>Our Story</h1>
+      <p>From slow-fermented sourdough starters to traditional pure ghee mithai, explore the passion and culinary artistry behind our treats.</p>
+    </div>
+    <div class="page-header-image">
+      <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=800" alt="Sweet Symphony Bakehouse Kitchen" />
+    </div>
+  </div>
+</div>
+
+<!-- ══ SECTION 1: MISSION & STORY ══ -->
+<section class="section" aria-label="Our mission">
+  <div class="container">
+    <div class="mission-grid">
+      <div class="animate-on-scroll" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+        <span class="section-label">Our Mission</span>
+        <h2 class="section-title">Heritage, Synergy</h2>
+        <p style="margin-bottom:1.5rem;">Founded in 2012 by Kavya Sundaram, Sweet Symphony began as a vision to bring custom-made celebratory cakes and traditional Indian sweets to the local community in Chennai. What started as a boutique kitchen has grown into a premier bakehouse and sweet shop, home to master confectioners, traditional sweet makers, and expert pastry chefs.</p>
+        <div class="about-actions" style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="contact.html" class="btn btn-primary"><i class="fas fa-shopping-basket"></i> Order Sweets &amp; Treats</a>
+        </div>
+      </div>
+      <div class="mission-image animate-on-scroll delay-2">
+        <img src="https://images.unsplash.com/photo-1579372786545-d24232daf58c?q=80&w=800" alt="Sweet Symphony Chef Baking in Kitchen" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 2: STATS + VALUES ══ -->
+<section class="section bg-secondary-section" aria-label="Our values and stats">
+  <div class="container">
+    <div class="text-center animate-on-scroll">
+      <span class="section-label">By the Numbers</span>
+      <h2 class="section-title">Handcrafted to Perform</h2>
+    </div>
+    <div class="stats-grid" style="margin-bottom:5rem;">
+      <div class="stat-card animate-on-scroll delay-1">
+        <span class="stat-number" data-counter data-target="10000" data-suffix="+">10,000+</span>
+        <div class="stat-label">Happy Customers</div>
+        <div class="stat-sublabel">Across residential &amp; corporate events</div>
+      </div>
+      <div class="stat-card animate-on-scroll delay-2">
+        <span class="stat-number" data-counter data-target="12" data-suffix="">12</span>
+        <div class="stat-label">Master Chefs</div>
+        <div class="stat-sublabel">Expert bakers &amp; sweet makers</div>
+      </div>
+      <div class="stat-card animate-on-scroll delay-3">
+        <span class="stat-number" data-counter data-target="3" data-suffix="">3</span>
+        <div class="stat-label">Main Categories</div>
+        <div class="stat-sublabel">Sweets, Bakery, Gift boxes</div>
+      </div>
+      <div class="stat-card animate-on-scroll delay-4">
+        <span class="stat-number" data-counter data-target="18" data-suffix="">18</span>
+        <div class="stat-label">Culinary Awards</div>
+        <div class="stat-sublabel">National confectionery honours</div>
+      </div>
+    </div>
+
+    <div class="text-center animate-on-scroll" style="margin-bottom:2.5rem;">
+      <span class="section-label">Our Values</span>
+      <h2 class="section-title">What We Stand For</h2>
+    </div>
+    <div class="values-grid">
+      <!-- Value 1 -->
+      <div class="value-card animate-on-scroll delay-1">
+        <div class="value-card-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?q=80&w=800" alt="Artisanal Excellence" class="value-card-img" />
+        </div>
+        <div class="value-card-content">
+          <h3>Artisanal Excellence</h3>
+          <p>Every ingredient is measured down to the gram, ensuring the perfect texture, rise, and sweetness in every single treat.</p>
+        </div>
+      </div>
+      <!-- Value 2 -->
+      <div class="value-card animate-on-scroll delay-2">
+        <div class="value-card-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=800" alt="Quality Sourcing" class="value-card-img" />
+        </div>
+        <div class="value-card-content">
+          <h3>Quality Sourcing</h3>
+          <p>We source pure cow ghee, Kashmiri saffron, organic cardamoms, and premium dry fruits for unparalleled richness.</p>
+        </div>
+      </div>
+      <!-- Value 3 -->
+      <div class="value-card animate-on-scroll delay-3">
+        <div class="value-card-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1579372786545-d24232daf58c?q=80&w=800" alt="Certified Hygiene" class="value-card-img" />
+        </div>
+        <div class="value-card-content">
+          <h3>Certified Hygiene</h3>
+          <p>Our kitchens strictly follow FSSAI safety codes, keeping prep areas spotless and sanitizing daily.</p>
+        </div>
+      </div>
+      <!-- Value 4 -->
+      <div class="value-card animate-on-scroll delay-4">
+        <div class="value-card-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=800" alt="Tailored Celebrations" class="value-card-img" />
+        </div>
+        <div class="value-card-content">
+          <h3>Tailored Celebrations</h3>
+          <p>We design customized wedding sweet boxes, corporate hampers, and themed cakes tailored to your preferences.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 3: TEAM ══ -->
+<section class="section" aria-label="Our team">
+  <div class="container">
+    <div class="text-center animate-on-scroll">
+      <span class="section-label">Bakers &amp; Sweet Makers</span>
+      <h2 class="section-title">Meet Our Team</h2>
+      <p class="section-desc">Passionate, certified pastry chefs and master sweet makers dedicated to bringing your delicious visions to life.</p>
+    </div>
+    <div class="team-grid about-team-grid">
+      <!-- Team 1 -->
+      <div class="team-card animate-on-scroll delay-1">
+        <div class="team-avatar">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&q=80" alt="Kavya Sundaram" loading="lazy" />
+          <div class="team-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <h3 class="team-name">Kavya Sundaram</h3>
+        <div class="team-role">Founder &amp; Head Baker</div>
+        <p class="team-desc">Culinary Institute of America graduate. 15+ years of pastry and sweet design. Expert in custom cakes.</p>
+      </div>
+      <!-- Team 2 -->
+      <div class="team-card animate-on-scroll delay-2">
+        <div class="team-avatar">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&q=80" alt="Riya Mehta" loading="lazy" />
+          <div class="team-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <h3 class="team-name">Riya Mehta</h3>
+        <div class="team-role">Head Patissier &amp; Chocolatier</div>
+        <p class="team-desc">Specializes in French butter pastries, custom sugar work, and premium chocolate designs.</p>
+      </div>
+      <!-- Team 3 -->
+      <div class="team-card animate-on-scroll delay-3">
+        <div class="team-avatar">
+          <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=300&q=80" alt="Sneha Krishnan" loading="lazy" />
+          <div class="team-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <h3 class="team-name">Sneha Krishnan</h3>
+        <div class="team-role">Operations &amp; Packaging Lead</div>
+        <p class="team-desc">Specializes in bulk order logistics, corporate gift packaging, and quality control systems.</p>
+      </div>
+      <!-- Team 4 -->
+      <div class="team-card animate-on-scroll delay-4">
+        <div class="team-avatar">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&q=80" alt="Pritha Roy" loading="lazy" />
+          <div class="team-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <h3 class="team-name">Pritha Roy</h3>
+        <div class="team-role">Master Traditional Sweet Chef</div>
+        <p class="team-desc">Expert in traditional Indian mithai, slow-cooked mawa, and hand-rolled laddoos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner"><div class="container">
+  <span class="section-label" style="color:var(--accent)">Start Your Order</span>
+  <h2>Ready to Design Your Custom Cake or Box?</h2>
+  <p>Every special order is prepared with meticulous care. Discuss your flavor preferences, quantities, and budget with a chef.</p>
+  <div class="cta-actions">
+    <a href="contact.html" class="btn btn-accent btn-lg"><i class="fas fa-shopping-basket"></i> Place Custom Order</a>
+    <a href="contact.html" class="btn btn-ghost btn-lg"><i class="fas fa-envelope"></i> Ask a Question</a>
+  </div>
+</div></section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="brand" style="text-decoration: none; margin-bottom: 1.5rem; display: inline-flex; align-items: center;">
+        <div class="brand-logo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px; height:20px; color:#fff; display:block;">
+            <path d="M6 15h12M4 20h16M12 4v4M12 11h.01M9 11h.01M15 11h.01" />
+            <rect x="5" y="8" width="14" height="7" rx="1" />
+            <rect x="3" y="15" width="18" height="5" rx="1" />
+          </svg>
+        </div>
+        <span class="brand-name">Sweet <span>Symphony</span></span>
+      </a>
+      <p class="footer-desc">Handcrafting traditional Indian sweets, premium baked goods, custom celebration cakes, and exquisite gift boxes made fresh daily.</p>
+      <div class="social-links">
+        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-link" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+      </div>
+    </div>
+    <div><h4 class="footer-heading">Explore</h4><ul class="footer-links"><li><a href="../index.html" class="footer-link">Home</a></li><li><a href="about.html" class="footer-link">About Us</a></li><li><a href="services.html" class="footer-link">Our Services &amp; Menu</a></li><li><a href="blog.html" class="footer-link">Bakehouse Insights</a></li><li><a href="contact.html" class="footer-link">Contact Us</a></li></ul></div>
+    <div><h4 class="footer-heading">Our Menu</h4><ul class="footer-links"><li><a href="services.html" class="footer-link">Traditional Sweets</a></li><li><a href="services.html" class="footer-link">Artisanal Bakery</a></li><li><a href="services.html" class="footer-link">Celebration Cakes</a></li><li><a href="services.html" class="footer-link">Festive Gift Boxes</a></li><li><a href="services.html" class="footer-link">Event Dessert Tables</a></li></ul></div>
+    <div><h4 class="footer-heading">Contact Info</h4><ul class="footer-links"><li><a href="tel:+919876543210" class="footer-link"><i class="fas fa-phone" style="width:16px;color:var(--accent)"></i> +91 98765 43210</a></li><li><a href="mailto:hello@sweetsymphony.in" class="footer-link"><i class="fas fa-envelope" style="width:16px;color:var(--accent)"></i> hello@sweetsymphony.in</a></li><li><a href="#" class="footer-link"><i class="fas fa-map-marker-alt" style="width:16px;color:var(--accent)"></i> Anna Nagar, Chennai</a></li><li><a href="#" class="footer-link"><i class="fas fa-clock" style="width:16px;color:var(--accent)"></i> Mon–Sun: 8AM–9PM</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2026 Sweet Symphony. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Hygiene Certification</a></div></div>
+</footer>
+<button class="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
