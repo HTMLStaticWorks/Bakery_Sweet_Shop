@@ -54,6 +54,10 @@
       #glass-balustrade-card {
         display: none !important;
       }
+      #glass-balustrade-card.show-card {
+        display: flex !important;
+        animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+      }
     }
     #extra-1440-card {
       display: none !important;
@@ -122,7 +126,7 @@
       <p>Baking advice, traditional recipes, ingredient sourcing guides, and sweet ideas straight from our oven.</p>
     </div>
     <div class="page-header-image">
-      <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=800" alt="Sweet Symphony Insights" />
+      <img src="https://swagathfoods.com.au/cdn/shop/articles/img-table-of-sweets-002_swagath_foods.png?v=1777903958&width=1000" alt="Sweet Symphony Insights" />
     </div>
   </div>
 </div>
@@ -148,7 +152,7 @@
         <div class="blog-grid">
           <!-- Post 1 -->
           <div class="blog-card animate-on-scroll delay-1" data-category="guides">
-            <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=600" alt="5 Sourdough Tips for the Perfect Crust" loading="lazy" /></div>
+            <div class="blog-card-img"><img src="https://melissaknorris.com/wp-content/uploads/2025/12/november-photos-38-scaled.jpg" alt="5 Sourdough Tips for the Perfect Crust" loading="lazy" /></div>
             <div class="blog-card-body">
               <div class="blog-meta"><span><i class="fas fa-calendar"></i> Dec 5, 2024</span><span><i class="fas fa-clock"></i> 5 min</span></div>
               <h3>5 Sourdough Tips for the Perfect Crust</h3>
@@ -158,7 +162,7 @@
           </div>
           <!-- Post 2 -->
           <div class="blog-card animate-on-scroll delay-2" data-category="engineering">
-            <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=600" alt="The Science of Slow Sugar Caramelization" loading="lazy" /></div>
+            <div class="blog-card-img"><img src="https://www.tastingtable.com/img/gallery/heres-the-exact-temperature-sugar-starts-to-caramelize/intro-1758467084.jpg" alt="The Science of Slow Sugar Caramelization" loading="lazy" /></div>
             <div class="blog-card-body">
               <div class="blog-meta"><span><i class="fas fa-calendar"></i> Nov 28, 2024</span><span><i class="fas fa-clock"></i> 6 min</span></div>
               <h3>The Science of Slow Sugar Caramelization</h3>
@@ -168,7 +172,7 @@
           </div>
           <!-- Post 3 -->
           <div class="class-card animate-on-scroll delay-1" data-category="cases" style="display:flex; flex-direction:column; border:1px solid var(--border); border-radius:var(--radius-lg); overflow:hidden; background:var(--bg-card);">
-            <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1579372786545-d24232daf58c?q=80&w=600" alt="How We Setup a 5-Tier Wedding Cake in 2 Hours" loading="lazy" /></div>
+            <div class="blog-card-img"><img src="https://celesteyum.com/wp-content/uploads/2025/02/Keep-It-Simple-scaled-1.jpg" alt="How We Setup a 5-Tier Wedding Cake in 2 Hours" loading="lazy" /></div>
             <div class="blog-card-body" style="padding:1.5rem;">
               <div class="blog-meta"><span><i class="fas fa-calendar"></i> Nov 20, 2024</span><span><i class="fas fa-clock"></i> 4 min</span></div>
               <h3>How We Setup a 5-Tier Wedding Cake in 2 Hours</h3>
@@ -178,7 +182,7 @@
           </div>
           <!-- Post 4 -->
           <div id="glass-balustrade-card" class="blog-card animate-on-scroll delay-2" data-category="materials">
-            <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=600" alt="Sourcing Pure A2 Cow Ghee for Traditional Mithai" loading="lazy" /></div>
+            <div class="blog-card-img"><img src="https://www.vasara.co.in/cdn/shop/articles/The_Truth_About_A2_Cow_Ghee.png?v=1782840483" alt="Sourcing Pure A2 Cow Ghee for Traditional Mithai" loading="lazy" /></div>
             <div class="blog-card-body">
               <div class="blog-meta"><span><i class="fas fa-calendar"></i> Nov 12, 2024</span><span><i class="fas fa-clock"></i> 3 min</span></div>
               <h3>Sourcing Pure A2 Cow Ghee for Traditional Mithai</h3>
@@ -188,7 +192,7 @@
           </div>
           <!-- Post 5 (Only visible at 1440px and above) -->
           <div id="extra-1440-card" class="blog-card animate-on-scroll delay-1" data-category="engineering">
-            <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?q=80&w=600" alt="How Temperature Humidity Affects Pastry Crisping" loading="lazy" /></div>
+            <div class="blog-card-img"><img src="https://www.ikeuchi.eu/wp-content/uploads/2025/05/vecteezy_rows-of-golden-brown-bread-rolls-fill-trays-in-a-bakery_53753552-scaled.jpg" alt="How Temperature Humidity Affects Pastry Crisping" loading="lazy" /></div>
             <div class="blog-card-body">
               <div class="blog-meta"><span><i class="fas fa-calendar"></i> Nov 05, 2024</span><span><i class="fas fa-clock"></i> 7 min</span></div>
               <h3>How Temperature Humidity Affects Pastry Crisping</h3>
@@ -198,7 +202,7 @@
           </div>
         </div>
         <div style="text-align:center;margin-top:2.5rem;">
-          <a href="#" class="btn btn-secondary btn-lg">Load More Articles <i class="fas fa-chevron-down"></i></a>
+          <a href="#" id="load-more-btn" class="btn btn-secondary btn-lg">Load More Articles <i class="fas fa-chevron-down"></i></a>
         </div>
       </div>
 
@@ -318,5 +322,38 @@
 </footer>
 <button class="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
 <script src="../assets/js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const loadMoreBtn = document.getElementById('load-more-btn');
+  const missingCard = document.getElementById('glass-balustrade-card');
+  
+  if (loadMoreBtn && missingCard) {
+    const mediaQuery = window.matchMedia('(min-width: 1024px)');
+    
+    const checkButtonVisibility = () => {
+      // Only show Load More on screens 1024px and above where the card is hidden by default
+      if (mediaQuery.matches && !missingCard.classList.contains('show-card')) {
+        loadMoreBtn.style.display = 'inline-flex';
+      } else {
+        loadMoreBtn.style.display = 'none';
+      }
+    };
+
+    // Run initially and listen for viewport/layout changes
+    checkButtonVisibility();
+    mediaQuery.addEventListener('change', checkButtonVisibility);
+
+    loadMoreBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      missingCard.classList.add('show-card');
+      // Re-trigger scroll animation check if using standard scroll reveal animations
+      if (window.ScrollAnimations && typeof window.ScrollAnimations.init === 'function') {
+        window.ScrollAnimations.init();
+      }
+      loadMoreBtn.style.display = 'none';
+    });
+  }
+});
+</script>
 </body>
 </html>
