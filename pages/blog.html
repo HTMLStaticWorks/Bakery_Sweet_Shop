@@ -37,7 +37,10 @@
     .tag-pill { padding:.3rem .9rem;background:var(--bg-secondary);border:1px solid var(--border);border-radius:var(--radius-full);font-size:.8rem;color:var(--text-secondary);transition:var(--transition-bounce);cursor:pointer; }
     .tag-pill:hover { background:var(--primary);border-color:var(--primary);color:#fff;transform:scale(1.05); }
     .main-blog-grid { display:grid;grid-template-columns:1fr;gap:3rem; }
-    @media(min-width:1024px){ .main-blog-grid { grid-template-columns:2fr 1fr; } }
+    @media(min-width:1024px){
+      .main-blog-grid { grid-template-columns:2fr 1fr; }
+      .blog-grid { grid-template-columns: repeat(2, 1fr); }
+    }
     @media(max-width:1023px){
       .main-blog-grid > aside {
         order: -1;
@@ -124,10 +127,10 @@
     </div>
     <div class="blog-filter">
       <button class="blog-filter-btn active" data-filter="all">All</button>
-      <button class="blog-filter-btn" data-filter="guides">Baking Guides</button>
-      <button class="blog-filter-btn" data-filter="cases">Chef Stories</button>
-      <button class="blog-filter-btn" data-filter="materials">Ingredients</button>
-      <button class="blog-filter-btn" data-filter="engineering">Sweet Science</button>
+      <button class="blog-filter-btn" data-filter="all">Baking Guides</button>
+      <button class="blog-filter-btn" data-filter="all">Chef Stories</button>
+      <button class="blog-filter-btn" data-filter="all">Ingredients</button>
+      <button class="blog-filter-btn" data-filter="all">Sweet Science</button>
     </div>
 
     <div class="main-blog-grid">
@@ -197,7 +200,7 @@
         <div class="sidebar-card animate-on-scroll delay-2">
           <h4>Popular Tags</h4>
           <div class="tags">
-            <span class="tag-pill">Traditional Sweets</span><span class="tag-pill">Artisanal Bread</span><span class="tag-pill">Custom Cakes</span><span class="tag-pill">Gifting Ideas</span><span class="tag-pill">Oven Settings</span><span class="tag-pill">Slow Fermentation</span><span class="tag-pill">Hygiene Codes</span><span class="tag-pill">Kashmiri Saffron</span><span class="tag-pill">Pure Ghee</span>
+            <span class="tag-pill">Traditional Sweets</span><span class="tag-pill">Artisanal Bread</span><span class="tag-pill">Custom Cakes</span><span class="tag-pill">Gifting Ideas</span><span class="tag-pill">Oven Settings</span><span class="tag-pill">Slow Fermentation</span><span class="tag-pill">Hygiene Codes</span></span>
           </div>
         </div>
         <div class="sidebar-card animate-on-scroll delay-3" style="background:linear-gradient(135deg,var(--primary),var(--primary-light));border-color:transparent;">
